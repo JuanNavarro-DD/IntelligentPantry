@@ -9,7 +9,7 @@ void step(boolean dir, byte dirPin, byte stepperPin, int steps)
 {
   digitalWrite(dirPin,dir);
   delay(100);
-  for(int i = 0; i,steps; i++)
+  for(int i = 0; i<steps; i++)
   {
     digitalWrite(stepperPin,HIGH);
     delayMicroseconds(stepDelay);
