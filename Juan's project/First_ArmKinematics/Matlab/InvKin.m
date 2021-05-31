@@ -1,9 +1,9 @@
 %%Fuzzy logic
 
-l1=10;
-l2=7;
+l1=228;
+l2=136.5;
 
-theta1 = 0:0.1:pi/2;
+theta1 = 0:0.1:pi;
 theta2 = 0:0.1:pi;
 
 [THETA1,THETA2] = meshgrid(theta1,theta2);
@@ -30,8 +30,8 @@ opt.DisplayFinalResults = 0;
 disp('---> Training first ANFIS network.');
 anfis1 = anfis(data1,opt);
 
-disp('---> Training first ANFIS network.');
-opt.InitialFIS = 6
+disp('---> Training Second ANFIS network.');
+opt.InitialFIS = 6;
 anfis2 = anfis(data2,opt);
 
 x = 0:0.1:2;

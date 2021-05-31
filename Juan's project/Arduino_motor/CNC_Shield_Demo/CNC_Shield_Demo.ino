@@ -29,15 +29,21 @@ void loop() {
  
  for(int x = 0; x<200; x++) { // loop for 200 steps
   digitalWrite(StepX,HIGH);
-  delayMicroseconds(1500);
+  delayMicroseconds(500);
   digitalWrite(StepX,LOW);
   delayMicroseconds(200);
+ }
+ delay(1000)
+ for(int x = 0; x<200; x++) {
   digitalWrite(StepY,HIGH);
-  delayMicroseconds(1500);
+  delayMicroseconds(500);
   digitalWrite(StepY,LOW);
   delayMicroseconds(200);
+ }
+ delay(1000)
+ for(int x = 0; x<200; x++) {
   digitalWrite(StepZ,HIGH);
-  delayMicroseconds(1500);
+  delayMicroseconds(500);
   digitalWrite(StepZ,LOW); 
   delayMicroseconds(200);
  }
