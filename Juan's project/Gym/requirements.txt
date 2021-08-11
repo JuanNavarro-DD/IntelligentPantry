@@ -1,1 +1,4 @@
-mujoco
+glfw-x11
+numpy
+gym
+mujoco_py

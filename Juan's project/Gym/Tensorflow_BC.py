@@ -68,7 +68,7 @@ def create_traning(logits):
         loss = tf.reduce_mean(loss)
 
         tf.summary.scalar('loss',loss)
-    
+
     with tf.variable_scope("training"):
         optimizer = tf.train.AdamOptimizer(learning_rate=1e-3)
         train_op = optimizer.minimize(loss)
@@ -79,20 +79,19 @@ def run_main(opts):
     state_data, action_data = process_data(opts.bc_data)
 
     env = gym.make('MountainCar-v0')
-    env._max_episode_step = 1200
-
+    
     x, model, logits =create_model()
     train, loss, labels =create_traning(logits)
 
     sess = tf.Session()
-    
+
 
     #Create summaries
     merged = tf.summary.merge_all()
     train_writer = tf.summary.FileWriter('./logs',sess.graph)
-    
+
     sess.run(tf.global_variables_initializer())
-    
+
     tick = 0
 
     while True:
