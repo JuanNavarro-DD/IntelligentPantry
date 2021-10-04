@@ -59,19 +59,19 @@ def build_agent(model,actions):
 
 
 
-print(env.reward_range[0])
+# print(env.reward_range[0])
 
 model = build_model(states,actions)
 
-#dqn = build_agent(model, actions)
-#dqn.compile(Adam(lr = 1e-3),metrics =['mae'])
-#dqn.fit(env,nb_steps=100000,visualize=False,verbose=1)
+dqn = build_agent(model, actions)
+dqn.compile(Adam(lr = 1e-3),metrics =['mae'])
+dqn.fit(env,nb_steps=50,visualize=False,verbose=1)
 
-#scores = dqn.test(env, nb_episodes = 100, visualize = False)
-#print(np.mean(scores.history['episode_reward']))
+scores = dqn.test(env, nb_episodes = 100, visualize = True)
+print(np.mean(scores.history['episode_reward']))
 
 
-#print(model.summary())
+print(model.summary())
 
 #dqn._weights('dqn_weights.h5f',overwrite=True) # This is to save the weights of the agent
 # To rebuild the model
