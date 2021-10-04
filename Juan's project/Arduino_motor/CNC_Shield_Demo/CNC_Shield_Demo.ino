@@ -32,42 +32,42 @@ void loop() {
  digitalWrite(DirZ, HIGH);
  digitalWrite(DirA, HIGH);
  
- digitalWrite(StepA,HIGH);
- digitalWrite(StepA,LOW);
- digitalWrite(StepX,HIGH);
- digitalWrite(StepX,LOW);
- digitalWrite(StepY,HIGH);
- digitalWrite(StepY,LOW);
- digitalWrite(StepZ,HIGH);
- digitalWrite(StepZ,LOW);
+// digitalWrite(StepA,HIGH);
+// digitalWrite(StepA,LOW);
+// digitalWrite(StepX,HIGH);
+// digitalWrite(StepX,LOW);
+// digitalWrite(StepY,HIGH);
+// digitalWrite(StepY,LOW);
+// digitalWrite(StepZ,HIGH);
+// digitalWrite(StepZ,LOW);
 
-//  for(int x = 0; x<200; x++) { // loop for 200 steps
-//   digitalWrite(StepA,HIGH);
-//   
-//   //delayMicroseconds(5000);
-//   digitalWrite(StepA,LOW);
-//   delay(1);
-//   //delayMicroseconds(2000);
-//  }
-// delay(1);
-// for(int x = 0; x<200; x++) { // loop for 200 steps
-//  digitalWrite(StepX,HIGH);
-//  
-//  digitalWrite(StepX,LOW);
-//  delayMicroseconds(1000);
-// }
-// delay(1);
-// for(int x = 0; x<200; x++) {
-//  digitalWrite(StepY,HIGH);
-//  digitalWrite(StepY,LOW);
-//  delayMicroseconds(1000);
-// }
-// delay(1);
-// for(int x = 0; x<200; x++) {
-//  digitalWrite(StepZ,HIGH);
-//  digitalWrite(StepZ,LOW); 
-//  delayMicroseconds(1000);
-// }
+  for(int x = 0; x<200; x++) { // loop for 200 steps
+   digitalWrite(StepA,HIGH);
+   
+   //delayMicroseconds(5000);
+   digitalWrite(StepA,LOW);
+   delay(1);
+   //delayMicroseconds(2000);
+  }
+ delay(1);
+ for(int x = 0; x<200; x++) { // loop for 200 steps
+  digitalWrite(StepX,HIGH);
+  
+  digitalWrite(StepX,LOW);
+  delayMicroseconds(1000);
+ }
+ delay(1);
+ for(int x = 0; x<200; x++) {
+  digitalWrite(StepY,HIGH);
+  digitalWrite(StepY,LOW);
+  delayMicroseconds(1000);
+ }
+ delay(1);
+ for(int x = 0; x<200; x++) {
+  digitalWrite(StepZ,HIGH);
+  digitalWrite(StepZ,LOW); 
+  delayMicroseconds(1000);
+ }
 delay(1); // delay for 1 second
 
 
