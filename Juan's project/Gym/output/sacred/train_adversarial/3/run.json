@@ -1,0 +1,146 @@
+{
+  "artifacts": [],
+  "command": "gail",
+  "experiment": {
+    "base_dir": "/home/juan/Documents/Github/IntelligentPantry/Juan's project/Gym/imitation/src/imitation/scripts/config",
+    "dependencies": [
+      "imitation==0.2.0",
+      "numpy==1.21.3",
+      "sacred==0.8.2",
+      "stable-baselines3==1.3.0"
+    ],
+    "mainfile": "train_adversarial.py",
+    "name": "train_adversarial",
+    "repositories": [
+      {
+        "commit": "dacb2425e9d19d57e318578a414b50cb98ead647",
+        "dirty": true,
+        "url": "http://github.com/HumanCompatibleAI/imitation"
+      },
+      {
+        "commit": "dacb2425e9d19d57e318578a414b50cb98ead647",
+        "dirty": true,
+        "url": "http://github.com/HumanCompatibleAI/imitation"
+      },
+      {
+        "commit": "dacb2425e9d19d57e318578a414b50cb98ead647",
+        "dirty": true,
+        "url": "http://github.com/HumanCompatibleAI/imitation"
+      },
+      {
+        "commit": "dacb2425e9d19d57e318578a414b50cb98ead647",
+        "dirty": true,
+        "url": "http://github.com/HumanCompatibleAI/imitation"
+      },
+      {
+        "commit": "dacb2425e9d19d57e318578a414b50cb98ead647",
+        "dirty": true,
+        "url": "http://github.com/HumanCompatibleAI/imitation"
+      },
+      {
+        "commit": "dacb2425e9d19d57e318578a414b50cb98ead647",
+        "dirty": true,
+        "url": "http://github.com/HumanCompatibleAI/imitation"
+      }
+    ],
+    "sources": [
+      [
+        "../common/common.py",
+        "_sources/common_6edd11371abc406da95503fbda168504.py"
+      ],
+      [
+        "../common/demonstrations.py",
+        "_sources/demonstrations_f291658946ead23d861431aaacaf29cb.py"
+      ],
+      [
+        "../common/reward.py",
+        "_sources/reward_af648851a2da9ccef4ad6740edec0ab7.py"
+      ],
+      [
+        "../common/rl.py",
+        "_sources/rl_60c70c55111ea6f470cf105537f839e0.py"
+      ],
+      [
+        "../common/train.py",
+        "_sources/train_e8fbb906b090c5ffb3c5e56d84adcc7a.py"
+      ],
+      [
+        "train_adversarial.py",
+        "_sources/train_adversarial_04af4737f5c13c59e2ce7a9ffd963eb0.py"
+      ]
+    ]
+  },
+  "fail_trace": [
+    "Traceback (most recent call last):\n",
+    "  File \"/home/juan/Documents/Github/IntelligentPantry/Juan's project/PP/lib/python3.9/site-packages/sacred/config/captured_function.py\", line 42, in captured_function\n    result = wrapped(*args, **kwargs)\n",
+    "  File \"/home/juan/Documents/Github/IntelligentPantry/Juan's project/Gym/imitation/src/imitation/scripts/train_adversarial.py\", line 155, in gail\n    return train_adversarial(algo_cls=gail_algo.GAIL)\n",
+    "  File \"/home/juan/Documents/Github/IntelligentPantry/Juan's project/PP/lib/python3.9/site-packages/sacred/config/captured_function.py\", line 42, in captured_function\n    result = wrapped(*args, **kwargs)\n",
+    "  File \"/home/juan/Documents/Github/IntelligentPantry/Juan's project/Gym/imitation/src/imitation/scripts/train_adversarial.py\", line 113, in train_adversarial\n    expert_trajs = demonstrations.load_expert_trajs()\n",
+    "  File \"/home/juan/Documents/Github/IntelligentPantry/Juan's project/PP/lib/python3.9/site-packages/sacred/config/captured_function.py\", line 42, in captured_function\n    result = wrapped(*args, **kwargs)\n",
+    "  File \"/home/juan/Documents/Github/IntelligentPantry/Juan's project/Gym/imitation/src/imitation/scripts/common/demonstrations.py\", line 69, in load_expert_trajs\n    expert_trajs = types.load(rollout_path)\n",
+    "  File \"/home/juan/Documents/Github/IntelligentPantry/Juan's project/Gym/imitation/src/imitation/data/types.py\", line 311, in load\n    with open(path, \"rb\") as f:\n",
+    "FileNotFoundError: [Errno 2] No such file or directory: 'imitation/intpant/rollouts/final.pkl'\n"
+  ],
+  "heartbeat": "2021-11-04T14:53:23.717591",
+  "host": {
+    "ENV": {},
+    "cpu": "Intel(R) Core(TM) i7-10510U CPU @ 1.80GHz",
+    "gpus": {
+      "driver_version": "470.63.01",
+      "gpus": [
+        {
+          "model": "NVIDIA GeForce MX130",
+          "persistence_mode": false,
+          "total_memory": 2004
+        }
+      ]
+    },
+    "hostname": "juan-laptop",
+    "os": [
+      "Linux",
+      "Linux-5.10.70-1-MANJARO-x86_64-with-glibc2.33"
+    ],
+    "python_version": "3.9.7"
+  },
+  "meta": {
+    "command": "gail",
+    "options": {
+      "--beat-interval": null,
+      "--capture": null,
+      "--comment": null,
+      "--debug": false,
+      "--enforce_clean": false,
+      "--file_storage": null,
+      "--force": false,
+      "--help": false,
+      "--loglevel": null,
+      "--mongo_db": null,
+      "--name": null,
+      "--pdb": false,
+      "--print-config": false,
+      "--priority": null,
+      "--queue": false,
+      "--s3": null,
+      "--sql": null,
+      "--tiny_db": null,
+      "--unobserved": false,
+      "COMMAND": "gail",
+      "UPDATE": [
+        "intelligent_pantry",
+        "common.fast",
+        "demonstrations.fast",
+        "train.fast",
+        "rl.fast",
+        "fast",
+        "demonstrations.rollout_path=imitation/intpant/rollouts/final.pkl"
+      ],
+      "help": false,
+      "with": true
+    }
+  },
+  "resources": [],
+  "result": null,
+  "start_time": "2021-11-04T14:53:22.834846",
+  "status": "FAILED",
+  "stop_time": "2021-11-04T14:53:23.718460"
+}

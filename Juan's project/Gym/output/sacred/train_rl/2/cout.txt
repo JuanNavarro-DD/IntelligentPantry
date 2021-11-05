@@ -1,0 +1,57 @@
+INFO - train_rl - Running command 'train_rl'
+INFO - train_rl - Started run with ID "2"
+INFO - imitation.scripts.common.common - Logging to dagger/reacher
+2021-11-05 23:09:54.045318: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcudart.so.11.0'; dlerror: libcudart.so.11.0: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: :/home/juan/.mujoco/mujoco200/bin
+2021-11-05 23:09:54.045336: I tensorflow/stream_executor/cuda/cudart_stub.cc:29] Ignore above cudart dlerror if you do not have a GPU set up on your machine.
+INFO - imitation.scripts.common.rl - RL algorithm: <class 'stable_baselines3.ppo.ppo.PPO'>
+INFO - imitation.scripts.common.rl - Policy network summary:
+ FeedForward32Policy(
+  (features_extractor): FlattenExtractor(
+    (flatten): Flatten(start_dim=1, end_dim=-1)
+  )
+  (mlp_extractor): MlpExtractor(
+    (shared_net): Sequential(
+      (0): Linear(in_features=11, out_features=32, bias=True)
+      (1): Tanh()
+      (2): Linear(in_features=32, out_features=32, bias=True)
+      (3): Tanh()
+    )
+    (policy_net): Sequential()
+    (value_net): Sequential()
+  )
+  (action_net): Linear(in_features=32, out_features=2, bias=True)
+  (value_net): Linear(in_features=32, out_features=1, bias=True)
+)
+INFO - root - Saved policy to dagger/reacher/policies/000000000002
+---------------------------
+| time/              |    |
+|    fps             | 49 |
+|    iterations      | 1  |
+|    time_elapsed    | 0  |
+|    total_timesteps | 2  |
+---------------------------
+INFO - root - Saved policy to dagger/reacher/policies/000000000004
+------------------------------------------
+| time/                   |              |
+|    fps                  | 38           |
+|    iterations           | 2            |
+|    time_elapsed         | 0            |
+|    total_timesteps      | 4            |
+| train/                  |              |
+|    approx_kl            | 0.0002554059 |
+|    clip_fraction        | 0            |
+|    clip_range           | 0.2          |
+|    entropy_loss         | -2.84        |
+|    explained_variance   | -3.73        |
+|    learning_rate        | 0.0003       |
+|    loss                 | 6.04         |
+|    n_updates            | 10           |
+|    policy_gradient_loss | -0.00674     |
+|    std                  | 1            |
+|    value_loss           | 12.4         |
+------------------------------------------
+INFO - root - Rollout stats: {'n_traj': 400, 'return_min': -10.510741359727142, 'return_mean': -6.448811743641557, 'return_std': 1.4047006031218312, 'return_max': -1.7060684789025378, 'len_min': 5, 'len_mean': 5.0, 'len_std': 0.0, 'len_max': 5}
+INFO - root - Dumped demonstrations to dagger/reacher/rollouts/final.pkl.
+INFO - root - Saved policy to dagger/reacher/policies/final
+INFO - train_rl - Result: {'n_traj': 2, 'monitor_return_len': 2, 'return_min': -2.064807564020157, 'return_mean': -1.8547050654888153, 'return_std': 0.21010249853134155, 'return_max': -1.6446025669574738, 'len_min': 5, 'len_mean': 5.0, 'len_std': 0.0, 'len_max': 5, 'monitor_return_min': -4.230144, 'monitor_return_mean': -3.799568, 'monitor_return_std': 0.43057600000000007, 'monitor_return_max': -3.368992}
+INFO - train_rl - Completed after 0:00:08

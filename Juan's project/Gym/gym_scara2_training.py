@@ -5,11 +5,6 @@ This code trains an agent in a modified reacher_WSU using keras agents
 it aims to train different agents and compare its performance
 
 '''
-
-
-
-
-
 import gym
 import random
 import numpy as np
@@ -23,7 +18,7 @@ from rl.policy import BoltzmannQPolicy
 from rl.memory import SequentialMemory
 
 
-env = gym.make("Reacher-v2") # The environment has been changed
+env = gym.make("Reacher-v2")  # The environment has been changed
 states = env.observation_space.shape[0]
 actions = env.action_space.shape[0]
 

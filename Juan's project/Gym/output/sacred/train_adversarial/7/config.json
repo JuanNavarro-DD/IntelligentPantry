@@ -1,0 +1,60 @@
+{
+  "algorithm_kwargs": {
+    "allow_variable_horizon": true,
+    "demo_batch_size": 1,
+    "gen_replay_buffer_capacity": 2,
+    "n_disc_updates_per_round": 4
+  },
+  "algorithm_specific": {},
+  "checkpoint_interval": 0,
+  "common": {
+    "algorithm_specific": {},
+    "env_make_kwargs": {},
+    "env_name": "Reacher-v2",
+    "log_dir": "output/gail/Reacher-v2/20211105_231152_4b5b9f",
+    "log_format_strs": [
+      "tensorboard",
+      "stdout"
+    ],
+    "log_level": 20,
+    "log_root": null,
+    "max_episode_steps": 5,
+    "num_vec": 2,
+    "parallel": false
+  },
+  "demonstrations": {
+    "algorithm_specific": {},
+    "data_dir": "data/",
+    "n_expert_demos": 1,
+    "rollout_path": "dagger/reacher/rollouts/final.pkl"
+  },
+  "reward": {
+    "algorithm_specific": {},
+    "net_cls": null,
+    "net_kwargs": {}
+  },
+  "rl": {
+    "algorithm_specific": {},
+    "batch_size": 2,
+    "rl_cls": {
+      "py/type": "stable_baselines3.ppo.ppo.PPO"
+    },
+    "rl_kwargs": {
+      "batch_size": 2,
+      "ent_coef": 0.0,
+      "learning_rate": 0.0003,
+      "n_epochs": 10
+    }
+  },
+  "seed": 439070557,
+  "show_config": false,
+  "total_timesteps": 10,
+  "train": {
+    "algorithm_specific": {},
+    "n_episodes_eval": 1,
+    "policy_cls": {
+      "py/type": "imitation.policies.base.FeedForward32Policy"
+    },
+    "policy_kwargs": {}
+  }
+}

@@ -1,0 +1,57 @@
+INFO - train_rl - Running command 'train_rl'
+INFO - train_rl - Started run with ID "1"
+INFO - imitation.scripts.common.common - Logging to imitation/intpan/
+2021-11-04 22:10:29.900312: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcudart.so.11.0'; dlerror: libcudart.so.11.0: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: :/home/juan/.mujoco/mujoco200/bin
+2021-11-04 22:10:29.900348: I tensorflow/stream_executor/cuda/cudart_stub.cc:29] Ignore above cudart dlerror if you do not have a GPU set up on your machine.
+INFO - imitation.scripts.common.rl - RL algorithm: <class 'stable_baselines3.ppo.ppo.PPO'>
+INFO - imitation.scripts.common.rl - Policy network summary:
+ FeedForward32Policy(
+  (features_extractor): FlattenExtractor(
+    (flatten): Flatten(start_dim=1, end_dim=-1)
+  )
+  (mlp_extractor): MlpExtractor(
+    (shared_net): Sequential(
+      (0): Linear(in_features=11, out_features=32, bias=True)
+      (1): Tanh()
+      (2): Linear(in_features=32, out_features=32, bias=True)
+      (3): Tanh()
+    )
+    (policy_net): Sequential()
+    (value_net): Sequential()
+  )
+  (action_net): Linear(in_features=32, out_features=2, bias=True)
+  (value_net): Linear(in_features=32, out_features=1, bias=True)
+)
+INFO - root - Saved policy to imitation/intpan/policies/000000000002
+---------------------------
+| time/              |    |
+|    fps             | 77 |
+|    iterations      | 1  |
+|    time_elapsed    | 0  |
+|    total_timesteps | 2  |
+---------------------------
+INFO - root - Saved policy to imitation/intpan/policies/000000000004
+------------------------------------------
+| time/                   |              |
+|    fps                  | 44           |
+|    iterations           | 2            |
+|    time_elapsed         | 0            |
+|    total_timesteps      | 4            |
+| train/                  |              |
+|    approx_kl            | 0.0011430979 |
+|    clip_fraction        | 0            |
+|    clip_range           | 0.2          |
+|    entropy_loss         | -2.84        |
+|    explained_variance   | 0.239        |
+|    learning_rate        | 0.0003       |
+|    loss                 | 11.4         |
+|    n_updates            | 10           |
+|    policy_gradient_loss | -0.0156      |
+|    std                  | 1            |
+|    value_loss           | 23.1         |
+------------------------------------------
+INFO - root - Rollout stats: {'n_traj': 400, 'return_min': -11.016584947649353, 'return_mean': -6.80085267503705, 'return_std': 1.337600574774341, 'return_max': -3.568402247270823, 'len_min': 5, 'len_mean': 5.0, 'len_std': 0.0, 'len_max': 5}
+INFO - root - Dumped demonstrations to imitation/intpan/rollouts/final.pkl.
+INFO - root - Saved policy to imitation/intpan/policies/final
+INFO - train_rl - Result: {'n_traj': 2, 'monitor_return_len': 2, 'return_min': -3.990744426846504, 'return_mean': -3.2220152094960213, 'return_std': 0.7687292173504829, 'return_max': -2.4532859921455383, 'len_min': 5, 'len_mean': 5.0, 'len_std': 0.0, 'len_max': 5, 'monitor_return_min': -8.432477, 'monitor_return_mean': -6.8084385, 'monitor_return_std': 1.6240385000000002, 'monitor_return_max': -5.1844}
+INFO - train_rl - Completed after 0:00:06
