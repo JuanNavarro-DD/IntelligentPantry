@@ -10,6 +10,5 @@ void loop() {
   // put your main code here, to run repeatedly:
   while(!Serial.available());
   x = Serial.readString().toInt();
-  Serial.print(x+1);
-
+  Serial.print(x);
 }
