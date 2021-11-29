@@ -1,0 +1,57 @@
+INFO - train_rl - Running command 'train_rl'
+INFO - train_rl - Started run with ID "5"
+INFO - imitation.scripts.common.common - Logging to dagger/IntePant
+2021-11-11 23:06:22.384780: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcudart.so.11.0'; dlerror: libcudart.so.11.0: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: :/home/juan/.mujoco/mujoco200/bin
+2021-11-11 23:06:22.384818: I tensorflow/stream_executor/cuda/cudart_stub.cc:29] Ignore above cudart dlerror if you do not have a GPU set up on your machine.
+INFO - imitation.scripts.common.rl - RL algorithm: <class 'stable_baselines3.ppo.ppo.PPO'>
+INFO - imitation.scripts.common.rl - Policy network summary:
+ FeedForward32Policy(
+  (features_extractor): FlattenExtractor(
+    (flatten): Flatten(start_dim=1, end_dim=-1)
+  )
+  (mlp_extractor): MlpExtractor(
+    (shared_net): Sequential(
+      (0): Linear(in_features=11, out_features=32, bias=True)
+      (1): Tanh()
+      (2): Linear(in_features=32, out_features=32, bias=True)
+      (3): Tanh()
+    )
+    (policy_net): Sequential()
+    (value_net): Sequential()
+  )
+  (action_net): Linear(in_features=32, out_features=2, bias=True)
+  (value_net): Linear(in_features=32, out_features=1, bias=True)
+)
+INFO - root - Saved policy to dagger/IntePant/policies/000000000002
+---------------------------
+| time/              |    |
+|    fps             | 27 |
+|    iterations      | 1  |
+|    time_elapsed    | 0  |
+|    total_timesteps | 2  |
+---------------------------
+INFO - root - Saved policy to dagger/IntePant/policies/000000000004
+------------------------------------------
+| time/                   |              |
+|    fps                  | 25           |
+|    iterations           | 2            |
+|    time_elapsed         | 0            |
+|    total_timesteps      | 4            |
+| train/                  |              |
+|    approx_kl            | 0.0022432804 |
+|    clip_fraction        | 0            |
+|    clip_range           | 0.2          |
+|    entropy_loss         | -2.84        |
+|    explained_variance   | -0.134       |
+|    learning_rate        | 0.0003       |
+|    loss                 | 2.63         |
+|    n_updates            | 10           |
+|    policy_gradient_loss | -0.015       |
+|    std                  | 0.997        |
+|    value_loss           | 5.59         |
+------------------------------------------
+INFO - root - Rollout stats: {'n_traj': 400, 'return_min': -11.369633689440343, 'return_mean': -6.888799335691005, 'return_std': 1.4204921748864112, 'return_max': -2.6174729899792557, 'len_min': 5, 'len_mean': 5.0, 'len_std': 0.0, 'len_max': 5}
+INFO - root - Dumped demonstrations to dagger/IntePant/rollouts/final.pkl.
+INFO - root - Saved policy to dagger/IntePant/policies/final
+INFO - train_rl - Result: {'n_traj': 50, 'monitor_return_len': 50, 'return_min': -4.360347121953964, 'return_mean': -3.28895053088665, 'return_std': 0.4671948832149414, 'return_max': -2.3804592192173004, 'len_min': 5, 'len_mean': 5.0, 'len_std': 0.0, 'len_max': 5, 'monitor_return_min': -9.446729, 'monitor_return_mean': -7.13009906, 'monitor_return_std': 1.0113775585702978, 'monitor_return_max': -5.165936}
+INFO - train_rl - Completed after 0:00:09

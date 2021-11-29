@@ -1,0 +1,50 @@
+{
+  "bc_kwargs": {
+    "batch_size": 32,
+    "l2_weight": 3e-05,
+    "optimizer_cls": {
+      "py/type": "torch.optim.adam.Adam"
+    },
+    "optimizer_kwargs": {
+      "lr": 0.0004
+    }
+  },
+  "bc_train_kwargs": {
+    "log_interval": 500,
+    "n_batches": 50,
+    "n_epochs": null
+  },
+  "common": {
+    "env_make_kwargs": {},
+    "env_name": "Reacher-v2",
+    "log_dir": "output/dagger/Reacher-v2/20211112_000948_a37287",
+    "log_format_strs": [
+      "tensorboard",
+      "stdout"
+    ],
+    "log_level": 20,
+    "log_root": null,
+    "max_episode_steps": 5,
+    "num_vec": 2,
+    "parallel": false
+  },
+  "dagger": {
+    "expert_policy_path": "data/expert_models/reacher_0/policies/final",
+    "expert_policy_type": "ppo",
+    "total_timesteps": 50,
+    "use_offline_rollouts": false
+  },
+  "demonstrations": {
+    "data_dir": "data/",
+    "n_expert_demos": 1,
+    "rollout_path": "dagger/Reacher/rollouts/final.pkl"
+  },
+  "seed": 670132768,
+  "train": {
+    "n_episodes_eval": 50,
+    "policy_cls": {
+      "py/type": "imitation.policies.base.FeedForward32Policy"
+    },
+    "policy_kwargs": {}
+  }
+}

@@ -1,0 +1,7 @@
+INFO - train_adversarial - Running command 'gail'
+INFO - train_adversarial - Started run with ID "32"
+INFO - imitation.scripts.common.common - Logging to output/gail/Reacher-v2/20211112_003541_3cab7a
+2021-11-12 00:35:41.464805: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcudart.so.11.0'; dlerror: libcudart.so.11.0: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: :/home/juan/.mujoco/mujoco200/bin
+2021-11-12 00:35:41.464836: I tensorflow/stream_executor/cuda/cudart_stub.cc:29] Ignore above cudart dlerror if you do not have a GPU set up on your machine.
+INFO - imitation.scripts.common.demonstrations - Loaded 400 expert trajectories from 'dagger/reacher/rollouts/final.pkl'
+INFO - imitation.scripts.common.demonstrations - Truncated to 1 expert trajectories

@@ -17,9 +17,10 @@ b = 0.45
 f = 1200
 log_path = os.path.join('training', 'Logs')
 #env = DummyVecEnv([lambda: env])
-model3 = TD3("MlpPolicy", env, verbose=1)
-#model2 = DDPG('MlpPolicy',env,verbose=1,tensorboard_log=log_path)
-model3.learn(total_timesteps=500000, log_interval=10)
+model = PPO('MlpPolicy', env, verbose=1, tensorboard_log=log_path)
+model3 = TD3("MlpPolicy", env, verbose=1, tensorboard_log=log_path)
+model2 = DDPG('MlpPolicy', env, verbose=1, tensorboard_log=log_path)
+model3.learn(total_timesteps=500000, log_interval=100)
 eval = evaluate_policy(model3, env, n_eval_episodes=20, render=True)
 # episodes = 5
 # for episode in range(1, episodes+1):

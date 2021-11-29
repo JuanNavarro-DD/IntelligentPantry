@@ -1,0 +1,128 @@
+{
+  "artifacts": [],
+  "command": "dagger",
+  "experiment": {
+    "base_dir": "/home/juan/Documents/Github/IntelligentPantry/Juan's project/Gym/imitation/src/imitation/scripts/config",
+    "dependencies": [
+      "imitation==0.2.0",
+      "numpy==1.21.3",
+      "sacred==0.8.2",
+      "stable-baselines3==1.3.0",
+      "torch==1.9.0"
+    ],
+    "mainfile": "train_imitation.py",
+    "name": "train_imitation",
+    "repositories": [
+      {
+        "commit": "dacb2425e9d19d57e318578a414b50cb98ead647",
+        "dirty": true,
+        "url": "http://github.com/HumanCompatibleAI/imitation"
+      },
+      {
+        "commit": "dacb2425e9d19d57e318578a414b50cb98ead647",
+        "dirty": true,
+        "url": "http://github.com/HumanCompatibleAI/imitation"
+      },
+      {
+        "commit": "dacb2425e9d19d57e318578a414b50cb98ead647",
+        "dirty": true,
+        "url": "http://github.com/HumanCompatibleAI/imitation"
+      },
+      {
+        "commit": "dacb2425e9d19d57e318578a414b50cb98ead647",
+        "dirty": true,
+        "url": "http://github.com/HumanCompatibleAI/imitation"
+      }
+    ],
+    "sources": [
+      [
+        "../common/common.py",
+        "_sources/common_6edd11371abc406da95503fbda168504.py"
+      ],
+      [
+        "../common/demonstrations.py",
+        "_sources/demonstrations_f291658946ead23d861431aaacaf29cb.py"
+      ],
+      [
+        "../common/train.py",
+        "_sources/train_e8fbb906b090c5ffb3c5e56d84adcc7a.py"
+      ],
+      [
+        "train_imitation.py",
+        "_sources/train_imitation_96894ce01cfecdcffe5cfdc535631059.py"
+      ]
+    ]
+  },
+  "fail_trace": [
+    "Traceback (most recent call last):\n",
+    "  File \"/home/juan/Documents/Github/IntelligentPantry/Juan's project/PP/lib/python3.9/site-packages/sacred/config/captured_function.py\", line 42, in captured_function\n    result = wrapped(*args, **kwargs)\n",
+    "  File \"/home/juan/Documents/Github/IntelligentPantry/Juan's project/Gym/imitation/src/imitation/scripts/train_imitation.py\", line 173, in dagger\n    return train_imitation(use_dagger=True)\n",
+    "  File \"/home/juan/Documents/Github/IntelligentPantry/Juan's project/PP/lib/python3.9/site-packages/sacred/config/captured_function.py\", line 42, in captured_function\n    result = wrapped(*args, **kwargs)\n",
+    "  File \"/home/juan/Documents/Github/IntelligentPantry/Juan's project/Gym/imitation/src/imitation/scripts/train_imitation.py\", line 127, in train_imitation\n    expert_policy = load_expert_policy(venv=venv)\n",
+    "  File \"/home/juan/Documents/Github/IntelligentPantry/Juan's project/PP/lib/python3.9/site-packages/sacred/config/captured_function.py\", line 42, in captured_function\n    result = wrapped(*args, **kwargs)\n",
+    "  File \"/home/juan/Documents/Github/IntelligentPantry/Juan's project/Gym/imitation/src/imitation/scripts/train_imitation.py\", line 78, in load_expert_policy\n    expert_policy = serialize.load_policy(expert_policy_type, expert_policy_path, venv)\n",
+    "  File \"/home/juan/Documents/Github/IntelligentPantry/Juan's project/Gym/imitation/src/imitation/policies/serialize.py\", line 218, in load_policy\n    return agent_loader(policy_path, venv)\n",
+    "  File \"/home/juan/Documents/Github/IntelligentPantry/Juan's project/Gym/imitation/src/imitation/policies/serialize.py\", line 127, in f\n    raise FileNotFoundError(\n",
+    "FileNotFoundError: path=data/expert_models/intelligentpantry_0/policies/final needs to be a directory containing model.zip and optionally vec_normalize.pkl.\n"
+  ],
+  "heartbeat": "2021-11-11T16:08:00.314234",
+  "host": {
+    "ENV": {},
+    "cpu": "Intel(R) Core(TM) i7-10510U CPU @ 1.80GHz",
+    "gpus": {
+      "driver_version": "470.63.01",
+      "gpus": [
+        {
+          "model": "NVIDIA GeForce MX130",
+          "persistence_mode": false,
+          "total_memory": 2004
+        }
+      ]
+    },
+    "hostname": "juan-laptop",
+    "os": [
+      "Linux",
+      "Linux-5.10.70-1-MANJARO-x86_64-with-glibc2.33"
+    ],
+    "python_version": "3.9.7"
+  },
+  "meta": {
+    "command": "dagger",
+    "options": {
+      "--beat-interval": null,
+      "--capture": null,
+      "--comment": null,
+      "--debug": false,
+      "--enforce_clean": false,
+      "--file_storage": null,
+      "--force": false,
+      "--help": false,
+      "--loglevel": null,
+      "--mongo_db": null,
+      "--name": null,
+      "--pdb": false,
+      "--print-config": false,
+      "--priority": null,
+      "--queue": false,
+      "--s3": null,
+      "--sql": null,
+      "--tiny_db": null,
+      "--unobserved": false,
+      "COMMAND": "dagger",
+      "UPDATE": [
+        "intelligent_pantry",
+        "common.fast",
+        "demonstrations.fast",
+        "fast",
+        "demonstrations.rollout_path=dagger/IntPant/rollouts/final.pkl"
+      ],
+      "help": false,
+      "with": true
+    }
+  },
+  "resources": [],
+  "result": null,
+  "start_time": "2021-11-11T16:07:53.812664",
+  "status": "FAILED",
+  "stop_time": "2021-11-11T16:08:00.318180"
+}
